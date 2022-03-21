@@ -1,6 +1,24 @@
+---
+layout: default
+title: Axion API Standard
+nav_order: 2
+---
+
 # Axion API Standard - WIP
 
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
 {:toc}
+</details>
+
+---
+
 
 ## What is Axion API Standard?
 The Axion API Standard is a set of guidelines on how to design and API when building an AMI (Axion Micro Service).
