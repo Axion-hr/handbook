@@ -50,9 +50,9 @@ POST is neither safe nor idempotent. It is therefore recommended for non-idempot
 
 Examples:
 
-POST http://www.example.com/customers
+`POST http://www.example.com/customers`
 
-POST http://www.example.com/customers/12345/orders
+`POST http://www.example.com/customers/12345/orders`
 
 ### GET
 The HTTP GET method is used to **read** (or retrieve) a representation of a resource. In the “happy” (or non-error) path, GET returns a JSON representation of the requsted object and an HTTP response code of 200 (OK). In an error case, it most often returns a 404 (NOT FOUND) or 400 (BAD REQUEST).
@@ -63,11 +63,11 @@ Do not expose unsafe operations via GET—it should never modify any resources o
 
 Examples:
 
-GET http://www.example.com/customers/12345
+`GET http://www.example.com/customers/12345`
 
-GET http://www.example.com/customers/12345/orders
+`GET http://www.example.com/customers/12345/orders`
 
-GET http://www.example.com/buckets/sample
+`GET http://www.example.com/buckets/sample`
 
 Getting one object
 
