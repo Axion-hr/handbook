@@ -31,6 +31,13 @@ We recommend using application/json as a default media type for request bodies a
 ## Versions
 API versioning should be done by using a `major.minor.patch` versionins sheme. Bug fixes, new releases that don't change the feature set should increment the `patch` version. New features should increase the `minor` version and breaking changes should never be introduced. So `major` version should not be increased without scheduling an all-hands meeting and making a small presentation of why are we making breaking changes, how to implement them when using your API and there is a 90% chance you'll be instructed not to do it. Good luck.
 
+Suggested approach for method versioning is to start with the version:
+
+`GET /v1/poi?page=0&size=100`
+
+This makes it easier to introduce `/v2/` wihtout any breaking changes. Just leave `/v1/` alive and impelement cool new features on `/v2/`.
+
+
 ## HTTP Methods
 We'll be using HTTP methods for CRUD operation in a REST services. The primary or most-commonly-used HTTP verbs (or methods, as they are properly called) are POST, GET, PUT, PATCH, and DELETE. These correspond to create, read, update, and delete (or CRUD) operations, respectively. (Most of the text taken from [here](https://www.restapitutorial.com/lessons/httpmethods.html))
 
@@ -73,3 +80,77 @@ Getting several objects
 `GET <url>/<pluralNoun>?skip=0&take=500&<optionalFilter>=500`
 
 When retreiving a list of objects you alway need to define skip and take or the defualts will be used. 
+
+### DELETE
+
+Delete should look like this:
+
+`DELETE /v1/poi/{id}?force=false`
+
+When possible deletion should be "soft", i.e. it should set the status of an object to DELETED or PENDING_DELETION.
+
+`force=false` should delete the element only if it has no children, fail and warn if there are.
+`force=true` should delete the element and all it's children.
+
+### PUT 
+
+Put looks like this:
+
+`PUT /v1/poi/{id}`
+
+and completley replaces the element with id `{id}` with the element in the request body.
+
+
+### PATCH
+
+There are 2 approaches for the PATCH... 
+
+- Option 1:
+
+something same as PUT just replaces all the values with new ones
+
+- Option 2: 
+
+Something like [this](https://www.baeldung.com/spring-rest-json-patch) :
+
+`PATCH /v1/poi/{id}`
+
+Body:
+```
+[
+{
+    "op":"replace",
+    "path":"/telephone",
+    "value":"001-555-5678"
+},{
+    "op":"move",
+    "from":"/favorites/0",
+    "path":"/favorites/-"
+},{
+    "op":"copy",
+    "from":"/favorites/0",
+    "path":"/favorites/-"
+},{
+    "op":"test", 
+    "path":"/telephone",
+    "value":"001-555-5678"
+}
+]
+```
+
+
+## Paging
+
+We'll often need to break large list into pages so the frotends can get smaller chunks easily.
+The suggested approach is described by [Spring](https://www.bezkoder.com/spring-boot-pagination-filter-jpa-pageable/) in detail.
+Using `page=<int>` and `size=<int>` path parameters so the frontend can define what it want's to see and returning a structure like this:
+
+`GET /v1/poi?page=1&size=3`
+```
+{
+    "totalItems": 8,
+    "pois": [...],
+    "totalPages": 3,
+    "currentPage": 1
+}
+```
