@@ -1,5 +1,7 @@
 # Axion API Standard - WIP
 
+{:toc}
+
 ## What is Axion API Standard?
 The Axion API Standard is a set of guidelines on how to design and API when building an AMI (Axion Micro Service).
 
