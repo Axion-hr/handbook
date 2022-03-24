@@ -1,13 +1,22 @@
 ---
 layout: default
-title: External tools
+title: Tools
 nav_order: 3
 ---
 
-# External tools
+# Tools
 
 ## External password sharing
 
 Passwords need to be sent via different channel then the link, resource that the password is used on:
 
 [One Time Secret](https://onetimesecret.com/)
+
+## Storing passwords and internal sharing
+
+
+## Translations
+Due to security and GDPR constraints we should avoid using Google translate for official documents with clients 
+especially within VW Group
+
+[DeepL](https://www.deepl.com/translator)
