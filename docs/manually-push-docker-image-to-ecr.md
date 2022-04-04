@@ -28,8 +28,9 @@ Secondly add the following in the 'properties' part (at the beginning of `pom.xm
 <dockerRepository>364952602419.dkr.ecr.eu-central-1.amazonaws.com</dockerRepository>
 ```
 
-
 To build project agains local docker installation run the following:
+
+(Ivor note: install maven and docker localy and run this in the console. Trying to run this in STS results in errors)
 
 ```
 mvn jib:dockerBuild
