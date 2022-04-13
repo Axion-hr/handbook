@@ -20,3 +20,12 @@ Due to security and GDPR constraints we should avoid using Google translate for 
 especially within VW Group
 
 [DeepL](https://www.deepl.com/translator)
+
+## Diagrams
+
+### Figma
+
+### PlantUml
+
+## HTTPBin
+[HTTP Bin](http://httpbin.org/#/)
