@@ -94,16 +94,19 @@ When possible deletion should be "soft", i.e. it should set the status of an obj
 
 ### PUT 
 
+⚠️ We'll avoid implementing PUT in our BFF services because it becaomes destructive once a new field is added and not all clients update the version.
+
+As a general rule unless there is a need for a PUT from a partner (3rd party service) don't implement it.
+
+```
 Put looks like this:
-
-`PUT /v1/poi/{id}`
-
+PUT /v1/poi/{id}
 and completley replaces the element with id `{id}` with the element in the request body.
-
+```
 
 ### PATCH
 
-There are 2 approaches for the PATCH... 
+There are 3 approaches for the PATCH... 
 
 - Option 1:
 
@@ -137,6 +140,58 @@ Body:
 }
 ]
 ```
+
+- Option 3:
+
+Try to be like Google:
+
+```
+Google APIs generally use the PATCH HTTP verb only, and do not support PUT requests.
+```
+
+and use the "fieldmask" approach.
+
+Object example:
+
+```
+{
+  "id":"126",
+  "firstName":"Max",
+  "lastName":"Smith",
+  "language":"de"
+}
+```
+
+If you wish to update the first name and keep everything else:
+
+```
+PATCH /v1/user/126
+{
+  "firstName":"Maximilian",
+  "fieldMask":["firstName"]
+}
+```
+
+If you wish to update the first name and delete the last name:
+```
+PATCH /v1/user/126
+{
+  "firstName":"Maximilian",
+  "fieldMask":["firstName", "lastName"]
+}
+```
+
+
+Updating the language:
+```
+PATCH /v1/user/126
+{
+  "language":"en",
+  "fieldMask":["language"]
+}
+```
+
+The implementation of any API method which has a fieldMask type field in the request should verify the included field paths, and return an `INVALID_ARGUMENT` error if any path is unmappable.
 
 
 ## Paging
