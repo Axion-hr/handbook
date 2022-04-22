@@ -1,3 +1,10 @@
+---
+layout: default
+title: Git Commit Convention
+nav_order: 4
+---
+
+
 # Git Commit Convention
 
 Try to use [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/) as much as possible.
