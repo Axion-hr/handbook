@@ -1,3 +1,8 @@
+---
+layout: default
+title: Resource oriented design
+nav_order: 3
+---
 
 # API proposal
 
