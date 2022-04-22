@@ -1,7 +1,7 @@
 ---
-title: Home
+title: API standard
 nav_order: 1
 has_children: true
 ---
 
-# Company handbook
+# API standard
