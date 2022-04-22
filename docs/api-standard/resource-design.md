@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Resource oriented design
+parent: API standard
 nav_order: 1
 ---
 
