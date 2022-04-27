@@ -1,15 +1,13 @@
 ---
 layout: default
 title: Resource oriented design
-parent: API standard
+parent: Axion API guidelines
 nav_order: 1
 ---
 
-# API proposal
-
-https://wordpress.com/support/markdown-quick-reference/
-
 # Resource oriented design
+
+> Based on: https://google.aip.dev/121
 
 Resource-oriented design is a pattern for specifying [RPC][] APIs, based on
 several high-level design principles (most of which are common to recent public
@@ -91,22 +89,3 @@ have sole responsibility and authority for maintaining the application state.
 [update]: ./0134.md
 [delete]: ./0135.md
 [custom methods]: ./0136.md
-
-
-
-
-`Sto je ovo da moze biti ovakvo
-Da ovo ne moze biti kul`
-
-sdf
-
-~~~
-```Sto je ovo da moze biti ovakvo
-Da ovo ne moze biti kul```
-~~~ 
-
-```javascript
-{
-    'te2st': 'baba'
-}
-```
