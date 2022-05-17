@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Axion API guidelines
+title: API guidelines
 nav_order: 2
 has_children: true
 has_toc: true
-parent: Axion API Standard
+parent: API Standard
 ---
 
 # API guidelines

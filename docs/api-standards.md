@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Axion API Standard
+title: API Standard
 nav_order: 3
 ---
 
