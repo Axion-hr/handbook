@@ -4,7 +4,6 @@ title: API guidelines
 nav_order: 2
 has_children: true
 has_toc: true
-parent: API Standard
 ---
 
 # API guidelines

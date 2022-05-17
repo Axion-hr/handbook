@@ -19,3 +19,7 @@ to follow all the best practices.
 
 # Proposals
 [proposals][]
+
+
+
+[proposals]: ./proposals.md
