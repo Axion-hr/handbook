@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Resource oriented design
-parent: Axion API guidelines
+parent: Spring Boot guidelines
 nav_order: 1
 ---
 

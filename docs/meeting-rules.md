@@ -4,10 +4,10 @@ title: Meeting rules
 nav_order: 5
 ---
 
-#Intro
+# Intro
 The purpose of this document is to provide a guideline on how to organize meetings for best efficiency in our company.
 
-#Before the Meeting
+# Before the Meeting
 1. Determine whether the meeting is necessary:
    1. Can the topic be solved with a 1-on-1?
    2. Is a written communication preferable?
@@ -27,7 +27,7 @@ The purpose of this document is to provide a guideline on how to organize meetin
       4. Align on next steps / planning.
    5. Ensure the availability of rooms, materials and/or equipment needed in advance.
 
-#During the Meeting
+# During the Meeting
 1. All attendants: Be on time / Leader: Start on time, do not wait for stragglers, it only encourages them.
 2. The leader of the meeting assures that the conversation stays on topic (agenda) and time (timeboxes) and that meeting minutes are recorded.
 3. Make sure everyone who is speaking is close to the speakerphone (if applicable).
@@ -35,6 +35,6 @@ The purpose of this document is to provide a guideline on how to organize meetin
 5. Practice active listening
 6. Reserve a minute of time for each item to recap when finishing with a timebox item and reserve enough time at the end in order to wrap all points up altogether. The wrap-up has to leave it clear to all attendants who is going to take care of action items and other responsibilities.
 
-#After the Meeting
+# After the Meeting
 1. Send meeting minutes to all participants including wrap-ups of all points discussed, materials, charts and – most importantly – a list of action items with clearly stated responsibilities and agreed priorities and timelines.
 2. The leader of the meeting assures that all stakeholders are informed and that all responsible persons receive their action items.
