@@ -10,7 +10,7 @@ nav_order: 4
 Try to use [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/) as much as possible.
 
 
-Short descpriton: A commit should have a `prefix(scope): description`.
+Short description: A commit should have a `prefix(scope): description`.
 
 Common prefixes:
 
