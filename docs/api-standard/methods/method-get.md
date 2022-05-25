@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Standard methods - Get
+title: Method - Get
 parent: Standard methods
 grand_parent: API guidelines
 nav_order: 1

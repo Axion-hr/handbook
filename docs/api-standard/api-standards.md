@@ -1,6 +1,7 @@
 ---
 layout: default
-title: API Standard
+title: API standard (archive)
+parent: API guidelines
 nav_order: 3
 ---
 
