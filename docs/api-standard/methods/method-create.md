@@ -35,25 +35,9 @@ Create methods implement a common request message pattern:
 
 ```
 message CreateBookRequest {
-  // The parent resource where this book will be created.
-  // Format: publishers/{publisher}
-  string parent = 1 [
-    (google.api.field_behavior) = REQUIRED,
-    (google.api.resource_reference) = {
-      child_type: "library.googleapis.com/Book"
-    }];
-
-  // The book to create.
-  Book book = 2 [(google.api.field_behavior) = REQUIRED];
-}
+  .. fields ...
 ```
 
-- A `parent` field **must** be included unless the resource being created is a
-  top-level resource. It **should** be called `parent`.
-  - The field **should** be [annotated as required][aip-203].
-  - The field **should** identify the [resource type][aip-123] of the resource
-    being created.
-- The resource field **must** be included and **must** map to the POST body.
 - The request message **must not** contain any other required fields and
   **should not** contain other optional fields except those described in this
   or another AIP.
