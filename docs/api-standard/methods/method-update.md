@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Method - Create
+title: Method - Update
 parent: Standard methods
 grand_parent: API guidelines
 nav_order: 4
@@ -45,12 +45,9 @@ Update methods implement a common request message pattern:
 
 ```proto
 message UpdateBookRequest {
-  // The book to update.
-  //
-  // The book's `name` field is used to identify the book to update.
-  // Format: publishers/{publisher}/books/{book}
-  Book book = 1 [(google.api.field_behavior) = REQUIRED];
-
+  resource: Book { 
+      ... book fields ...
+  },
   updateMask = [ list of fields to update ]
 }
 ```
@@ -58,8 +55,6 @@ message UpdateBookRequest {
 - The request message **must** contain a field for the resource.
   - The field **must** map to the `PATCH` body.
   - The field **should** be [annotated as required][aip-203].
-  - A `name` field **must** be included in the resource message. It **should**
-    be called `name`.
 - A field mask **should** be included in order to support partial update. It **should** be called
   `updateMask`.
   - The fields used in the field mask correspond to the resource being updated
