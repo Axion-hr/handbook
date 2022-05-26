@@ -110,7 +110,12 @@ The log message that started as ```2022-05-24 23:14:30
 
 
 #### CorrelateId / TraceId
-TBD
+Idea to use OpenTelemetry instead of manufacturing our custom solution 
+sources:
+- [Splunk and good information](https://www.splunk.com/en_us/data-insider/what-is-opentelemetry.html#important-to-devops)
+- [Spring boot with Grafana](https://grafana.com/blog/2022/04/26/set-up-and-observe-a-spring-boot-application-with-grafana-cloud-prometheus-and-opentelemetry/https://grafana.com/blog/2022/04/26/set-up-and-observe-a-spring-boot-application-with-grafana-cloud-prometheus-and-opentelemetry/)
+- [DataDog](https://docs.datadoghq.com/tracing/setup_overview/open_standards/)
+- [AWS CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-open-telemetry.html)
 
 
 ### Lombok
