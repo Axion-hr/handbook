@@ -5,3 +5,6 @@ This document outlines mayor version of libraries used for development. Unless t
 |Library name | Version | EOL | Home page |
 |-|-|-|-|
 |React| 18.2.0 | - | [www.reactjs.org](https://reactjs.org/) |
+|Material UI| 5.8.6 | - | [www.mui.com](https://mui.com/)) |
+|Redux Toolkit| 1.8.2 | - | [www.redux-toolkit.js.org](https://redux-toolkit.js.org/) |
+|React Hook Form| 7.33.0 | - | [www.react-hook-form.com](https://react-hook-form.com/) |
