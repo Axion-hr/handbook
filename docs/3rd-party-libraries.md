@@ -4,4 +4,4 @@ This document outlines mayor version of libraries used for development. Unless t
 
 |Library name | Version | EOL | Home page |
 |-|-|-|-|
-|bla| 1.2.3 | 2023-12-31 | www.example.com |
+|React| 18.2.0 | - | [www.reactjs.org](https://reactjs.org/) |
