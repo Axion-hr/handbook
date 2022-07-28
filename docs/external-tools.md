@@ -13,7 +13,7 @@ Passwords need to be sent via different channel then the link, resource that the
 [One Time Secret](https://onetimesecret.com/)
 
 ## Storing passwords and internal sharing
-
+[Psono] (https://www.psono.pw)
 
 ## Translations
 Due to security and GDPR constraints we should avoid using Google translate for official documents with clients 
