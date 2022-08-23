@@ -143,6 +143,107 @@ sources:
 - [AWS CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-open-telemetry.html)
 
 
+### Metrics
+Metrics provide a more holistic way of monitoring the systems, things like memory usage, CPU, counter for method hits and relevant events. Spring boot provides metrics out of the box using [Micrometer](https://micrometer.io/) and exposed via Spring Boot Actuators
+
+#### Installation
+```
+<!-- Actuator used for health check endpoint -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+
+<!-- Micrometer Prometheus registry  -->
+<dependency>
+    <groupId>io.micrometer</groupId>
+    <artifactId>micrometer-registry-prometheus</artifactId>
+    <scope>runtime</scope>
+</dependency>
+```
+
+#### Usage
+Metrics can be found at http://localhost:{port}/actuator/metrics or Prometheus exporter at http://localhost:{port}/actuator/prometheus. They are wired automatically and don't need any special configuration for the default behaviour. 
+
+##### Custom metrics
+Sometimes we need to export custom metrics that will help us monitor our system. In Spring Boot this is really easy, if you are using this method in multiple locations please create a component. 
+
+```
+class ....
+    private final MeterRegistry meterRegistry;
+    
+    constructor (MeterRegistry meterRegistry)
+    {
+        this.meterRegistry = meterRegistry;
+    }
+    
+    method
+        meterRegistry.counter("order.created", "country", "HR").increment();
+```
+
+### Grafana agent config
+
+Local config.file, credentials are some generic Grafana cloud for axion and you can find them in psono or ask Goran
+```
+server:
+  log_level: debug
+
+metrics:
+  configs:
+  - name: axion-observability
+    remote_write:
+    - basic_auth:
+        username: 441240
+        password: eyJrIjoiOGQ0N2EyMGQxMjE2MDljNWNkN2FmYWExYzA0YTIyZTM3NDhlYTQxYyIsIm4iOiJPYnNlcnZhYmlsaXR5IGRlbW8iLCJpZCI6NjUyNDAzfQ==
+      url: https://prometheus-prod-01-eu-west-0.grafana.net/api/prom/push
+    scrape_configs:
+    - job_name: axion-observability
+      scrape_interval: 10s
+      static_configs:
+      - targets:
+        - 127.0.0.1:35100
+      metrics_path: /actuator/prometheus
+      metric_relabel_configs:
+        - source_labels: [ 'trace_id' ]
+          target_label: 'traceID'
+
+logs:
+  configs:
+  - name: default
+    positions:
+      filename: /tmp/positions.yaml
+    scrape_configs:
+      - job_name: axion-observability
+        static_configs:
+          - targets: [localhost]
+            labels:
+              job: syslog
+              __path__: /Users/gzuri/git/axion-demo-observability/logs/application.log
+    clients:
+      - url: https://219590:eyJrIjoiOGQ0N2EyMGQxMjE2MDljNWNkN2FmYWExYzA0YTIyZTM3NDhlYTQxYyIsIm4iOiJPYnNlcnZhYmlsaXR5IGRlbW8iLCJpZCI6NjUyNDAzfQ==@logs-prod-eu-west-0.grafana.net/loki/api/v1/push
+
+traces:
+  configs:
+  - name: default
+    receivers:
+      otlp:
+        protocols:
+          http:
+          grpc:
+    remote_write:
+      - endpoint: tempo-eu-west-0.grafana.net:443
+        basic_auth:
+          username: 216102
+          password: eyJrIjoiOGQ0N2EyMGQxMjE2MDljNWNkN2FmYWExYzA0YTIyZTM3NDhlYTQxYyIsIm4iOiJPYnNlcnZhYmlsaXR5IGRlbW8iLCJpZCI6NjUyNDAzfQ==
+
+integrations:
+  node_exporter:
+    enabled: true
+~                       
+```
+
+Running agent locally ( in process not as a service): ```grafana-agent % /opt/homebrew/opt/grafana-agent/bin/grafana-agent -config.file /opt/homebrew/etc/grafana-agent/config.yml```
+
 ### Lombok
 One of the biggest complaints against Java is how much noise can be found in a single class. Project Lombok saw this as a problem and aims to reduce the noise of some of the worst offenders by replacing them with a simple set of annotations.
 
