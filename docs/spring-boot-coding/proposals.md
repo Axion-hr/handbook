@@ -51,7 +51,7 @@ additional sources for logfmt:
 
 In addition to the regular logging configuration that would have date(UTC) LOG_LEVEL class message, the message would be structured as a key value pairs that would be parsed in log aggregation system. 
 ```
-key1=value1, key2=value2, key3=value3
+key1=value1 key2=value2 key3=value3
 ```
 
 #### Custom logger
