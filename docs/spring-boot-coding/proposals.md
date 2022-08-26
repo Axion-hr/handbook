@@ -9,7 +9,7 @@ nav_order: 1
 ### Logging
 Every application needs to have proper logging in place in order to function, Spring Boot comes with LogBack and we will use it as is
 
-PROPERLY USER LOG LEVELS! 
+PROPERLY USE LOG LEVELS! 
 
 #### Installation
 Add the following lines to your application.properties
