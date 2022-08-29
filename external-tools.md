@@ -1,9 +1,3 @@
----
-layout: default
-title: Tools
-nav_order: 5
----
-
 # Tools
 
 ## External password sharing
