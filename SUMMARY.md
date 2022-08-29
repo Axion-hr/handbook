@@ -28,4 +28,4 @@
 
 * [Technical and organizational measures](organization/technical-and-organizational-measures.md)
 * [Meeting rules](organization/meeting-rules.md)
-* [Tools](organization/external-tools.md)
+* [Tools](devops/external-tools.md)
