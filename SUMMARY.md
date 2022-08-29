@@ -9,7 +9,7 @@
   * [java-standards](docs/java-standards.md)
   * [How to manually push docker image to ECR](docs/manually-push-docker-image-to-ecr.md)
   * [Meeting rules](docs/meeting-rules.md)
-  * [test docs](docs/test docs.md)
+  * [test file title](docs/test-file-title.md)
   * [Technical and organizational measures](docs/technical-and-organizational-measures.md)
   * [api-standard](docs/api-standard/README.md)
     * [Axion API Standard - WIP](docs/api-standard/api-standards.md)
