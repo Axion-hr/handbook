@@ -1,7 +1,6 @@
 # Table of contents
 
-* [axion.github.io](README.md)
-* [Company handbook](index.md)
+* [Company handbook](README.md)
 * [docs](docs/README.md)
   * [3rd party library standards](docs/3rd-party-libraries.md)
   * [Tools](docs/external-tools.md)
