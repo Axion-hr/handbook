@@ -17,7 +17,6 @@
     * [Standard methods: List](coding/api-standard/methods/standard-methods-list.md)
     * [Standard methods: Update](coding/api-standard/methods/standard-methods-update.md)
 * [Git Commit Convention](coding/git-commit-convention.md)
-* [Java Standards (draft)](coding/java-standards.md)
 * [3rd party library standards](coding/3rd-party-libraries.md)
 
 ## Devops
