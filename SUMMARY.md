@@ -1,9 +1,9 @@
 # Table of contents
 
 * [Company handbook](README.md)
+* [3rd party library standards](3rd-party-libraries.md)
+* [Tools](external-tools.md)
 * [docs](docs/README.md)
-  * [3rd party library standards](docs/3rd-party-libraries.md)
-  * [Tools](docs/external-tools.md)
   * [Git Commit Convention](docs/git-commit-convention.md)
   * [java-standards](docs/java-standards.md)
   * [How to manually push docker image to ECR](docs/manually-push-docker-image-to-ecr.md)
