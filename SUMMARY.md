@@ -11,7 +11,6 @@
 * [java-standards](coding/java-standards.md)
 * [api-standard](coding/api-standard/README.md)
   * [Axion API Standard - WIP](coding/api-standard/axion-api-standard-wip.md)
-  * [API guidelines](coding/api-standard/api-guidelines.md)
   * [Pagination](coding/api-standard/pagination.md)
   * [Resource oriented design](coding/api-standard/resource-oriented-design.md)
   * [methods](coding/api-standard/methods/README.md)
