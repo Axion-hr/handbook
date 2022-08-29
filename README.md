@@ -1,31 +1,7 @@
-# Git Commit Convention
+# Company handbook
 
-Try to use [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/) as much as possible.
+Company handbook
 
-Short description: A commit should have a `prefix(scope): description`.
+Link to the handbook: https://axion-hr.github.io/handbook/
 
-Common prefixes:
-
-```
-fix:
-feat:
-docs:
-build:
-chore:
-ci:
-style:
-refactor:
-perf:
-test:
-```
-
-Scope examples:
-
-```
-(api)
-(lang)
-(users)
-(db model)
-```
-
-After the `description` add at least 2 new lines and you can start a more detailed description there.
+Written using: https://just-the-docs.github.io/just-the-docs/docs/navigation-structure/
