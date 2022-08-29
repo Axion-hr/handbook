@@ -1,9 +1,3 @@
----
-layout: default
-title: Meeting rules
-nav_order: 5
----
-
 # Intro
 The purpose of this document is to provide a guideline on how to organize meetings for best efficiency in our company.
 
