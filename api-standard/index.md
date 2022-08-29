@@ -1,11 +1,3 @@
----
-layout: default
-title: API guidelines
-nav_order: 2
-has_children: true
-has_toc: true
----
-
 # API guidelines
 
 Axion Solutions API standard is based on on Google's https://google.aip.dev/ - "API Improvement Proposals" document. 

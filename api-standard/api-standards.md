@@ -1,12 +1,4 @@
----
-title: API standard (archive)
-parent: API guidelines
-nav_order: 3
----
-
 # Axion API Standard - WIP
-
-{: .no\_toc }
 
 <details>
 

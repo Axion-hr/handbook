@@ -4,7 +4,6 @@
 
 ## Coding
 
-* [Page 1](coding/page-1.md)
 * [Git Commit Convention](coding/git-commit-convention.md)
 * [spring-boot-coding](coding/spring-boot-coding/README.md)
   * [Spring Boot guidelines](coding/spring-boot-coding/spring-boot-guidelines.md)
