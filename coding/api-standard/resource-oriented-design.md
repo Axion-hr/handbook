@@ -29,7 +29,7 @@ A _collection_ contains resources of _the same type_. For example, a publisher h
 
 ### Methods
 
-Resource-oriented APIs emphasize resources (data model) over the methods performed on those resources (functionality). A typical resource-oriented API exposes a large number of resources with a small number of methods on each resource. The methods can be either the standard methods ([Get](0131.md), [List](0132.md), [Create](0133.md), [Update](0134.md), [Delete](0135.md)), or [custom methods](0136.md).
+Resource-oriented APIs emphasize resources (data model) over the methods performed on those resources (functionality). A typical resource-oriented API exposes a large number of resources with a small number of methods on each resource. The methods can be either the standard methods ([Get](../../docs/api-standard/0131.md), [List](../../docs/api-standard/0132.md), [Create](../../docs/api-standard/0133.md), [Update](../../docs/api-standard/0134.md), [Delete](../../docs/api-standard/0135.md)), or [custom methods](../../docs/api-standard/0136.md).
 
 **Note:** A custom method in resource-oriented design does _not_ entail defining a new or custom HTTP verb. Custom methods use traditional HTTP verbs (usually `POST`) and define the custom verb in the URI.
 
