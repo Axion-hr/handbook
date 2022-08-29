@@ -1,5 +1,4 @@
 ---
-layout: default
 title: API standard (archive)
 parent: API guidelines
 nav_order: 3
@@ -7,29 +6,30 @@ nav_order: 3
 
 # Axion API Standard - WIP
 
-{: .no_toc }
+{: .no\_toc }
 
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
+<details>
+
+<summary>Table of contents</summary>
+
+{: .text-delta } 1. TOC {:toc}
+
 </details>
 
----
-
+***
 
 ## What is Axion API Standard?
+
 The Axion API Standard is a set of guidelines on how to design and API when building an AMI (Axion Micro Service).
 
 It is loosely based on [OpenAPI Specification](https://spec.openapis.org/oas/latest.html) so feel free to read that, but this document should be much shorter to get you up to speed and coding faster. This document will skip all the common sense remarks and try to answer questions you actually could have. (example of a common-sense remark: The value for these path parameters MUST NOT contain any unescaped “generic syntax” characters described by [RFC3986](https://spec.openapis.org/oas/latest.html#bib-RFC3986): forward slashes (/), question marks (?), or hashes (#).)
 
 ## Media types
+
 We recommend using application/json as a default media type for request bodies and responses.
 
 ## Versions
+
 API versioning should be done by using a `major.minor.patch` versionins sheme. Bug fixes, new releases that don't change the feature set should increment the `patch` version. New features should increase the `minor` version and breaking changes should never be introduced. So `major` version should not be increased without scheduling an all-hands meeting and making a small presentation of why are we making breaking changes, how to implement them when using your API and there is a 90% chance you'll be instructed not to do it. Good luck.
 
 Suggested approach for method versioning is to start with the version:
@@ -38,11 +38,12 @@ Suggested approach for method versioning is to start with the version:
 
 This makes it easier to introduce `/v2/` wihtout any breaking changes. Just leave `/v1/` alive and impelement cool new features on `/v2/`.
 
-
 ## HTTP Methods
+
 We'll be using HTTP methods for CRUD operation in a REST services. The primary or most-commonly-used HTTP verbs (or methods, as they are properly called) are POST, GET, PUT, PATCH, and DELETE. These correspond to create, read, update, and delete (or CRUD) operations, respectively. (Most of the text taken from [here](https://www.restapitutorial.com/lessons/httpmethods.html))
 
 ### POST
+
 The POST verb is most-often utilized to **create** new resources. In particular, it's used to create subordinate resources. That is, subordinate to some other (e.g. parent) resource. In other words, when creating a new resource, POST to the parent and the service takes care of associating the new resource with the parent, assigning an ID (new resource URI), etc.
 
 On successful creation, return HTTP status 201, returning a Location header with a link to the newly-created resource with the 201 HTTP status.
@@ -56,6 +57,7 @@ Examples:
 `POST http://www.example.com/customers/12345/orders`
 
 ### GET
+
 The HTTP GET method is used to **read** (or retrieve) a representation of a resource. In the “happy” (or non-error) path, GET returns a JSON representation of the requsted object and an HTTP response code of 200 (OK). In an error case, it most often returns a 404 (NOT FOUND) or 400 (BAD REQUEST).
 
 According to the design of the HTTP specification, GET (along with HEAD) requests are used only to read data and not change it. Therefore, when used this way, they are considered safe. That is, they can be called without risk of data modification or corruption—calling it once has the same effect as calling it 10 times, or none at all. Additionally, GET (and HEAD) is idempotent, which means that making multiple identical requests ends up having the same result as a single request.
@@ -80,7 +82,7 @@ Getting several objects
 
 `GET <url>/<pluralNoun>?skip=0&take=500&<optionalFilter>=500`
 
-When retreiving a list of objects you alway need to define skip and take or the defualts will be used. 
+When retreiving a list of objects you alway need to define skip and take or the defualts will be used.
 
 ### DELETE
 
@@ -88,12 +90,11 @@ Delete should look like this:
 
 `DELETE /v1/poi/{id}?force=false`
 
-When possible deletion should be "soft", i.e. it should set the status of an object to DELETED or PENDING_DELETION.
+When possible deletion should be "soft", i.e. it should set the status of an object to DELETED or PENDING\_DELETION.
 
-`force=false` should delete the element only if it has no children, fail and warn if there are.
-`force=true` should delete the element and all it's children.
+`force=false` should delete the element only if it has no children, fail and warn if there are. `force=true` should delete the element and all it's children.
 
-### PUT 
+### PUT
 
 ⚠️ We'll avoid implementing PUT in our BFF services because it becaomes destructive once a new field is added and not all clients update the version.
 
@@ -107,19 +108,20 @@ and completley replaces the element with id `{id}` with the element in the reque
 
 ### PATCH
 
-There are 3 approaches for the PATCH... 
+There are 3 approaches for the PATCH...
 
-- Option 1:
+* Option 1:
 
 something same as PUT just replaces all the values with new ones
 
-- Option 2: 
+* Option 2:
 
 Something like [this](https://www.baeldung.com/spring-rest-json-patch) :
 
 `PATCH /v1/poi/{id}`
 
 Body:
+
 ```
 [
 {
@@ -142,7 +144,7 @@ Body:
 ]
 ```
 
-- Option 3:
+* Option 3:
 
 Try to be like Google:
 
@@ -174,6 +176,7 @@ PATCH /v1/user/126
 ```
 
 If you wish to update the first name and delete the last name:
+
 ```
 PATCH /v1/user/126
 {
@@ -182,8 +185,8 @@ PATCH /v1/user/126
 }
 ```
 
-
 Updating the language:
+
 ```
 PATCH /v1/user/126
 {
@@ -194,14 +197,12 @@ PATCH /v1/user/126
 
 The implementation of any API method which has a fieldMask type field in the request should verify the included field paths, and return an `INVALID_ARGUMENT` error if any path is unmappable.
 
-
 ## Paging
 
-We'll often need to break large list into pages so the frotends can get smaller chunks easily.
-The suggested approach is described by [Spring](https://www.bezkoder.com/spring-boot-pagination-filter-jpa-pageable/) in detail.
-Using `page=<int>` and `size=<int>` path parameters so the frontend can define what it want's to see and returning a structure like this:
+We'll often need to break large list into pages so the frotends can get smaller chunks easily. The suggested approach is described by [Spring](https://www.bezkoder.com/spring-boot-pagination-filter-jpa-pageable/) in detail. Using `page=<int>` and `size=<int>` path parameters so the frontend can define what it want's to see and returning a structure like this:
 
 `GET /v1/poi?page=1&size=3`
+
 ```
 {
     "totalItems": 8,
@@ -211,9 +212,10 @@ Using `page=<int>` and `size=<int>` path parameters so the frontend can define w
 }
 ```
 
-## Error reponses
+## Error responses
 
-Productuion errors exceptions should look like this:
+Production errors exceptions should look like this:
+
 ```
 {
   "timestamp": "2022-03-22T15:08:42.804+00:00",
