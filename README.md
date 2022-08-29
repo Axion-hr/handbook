@@ -1,5 +1,7 @@
 # Intro
 
+{:toc}
+
 Company handbook
 
 Link to the handbook: [https://axion-solutions.gitbook.io/handbook/](https://axion-solutions.gitbook.io/handbook/)
