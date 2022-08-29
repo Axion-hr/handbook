@@ -15,7 +15,6 @@
   * [Pagination](coding/api-standard/pagination.md)
   * [Resource oriented design](coding/api-standard/resource-oriented-design.md)
   * [methods](coding/api-standard/methods/README.md)
-    * [Standard methods](coding/api-standard/methods/standard-methods.md)
     * [Standard methods: Create](coding/api-standard/methods/standard-methods-create.md)
     * [Standard methods: Get](coding/api-standard/methods/standard-methods-get.md)
     * [Standard methods: List](coding/api-standard/methods/standard-methods-list.md)
@@ -25,9 +24,9 @@
 ## Devops
 
 * [How to manually push docker image to ECR](devops/how-to-manually-push-docker-image-to-ecr.md)
-* [Tools](external-tools.md)
+* [Tools](devops/external-tools.md)
 
 ## Organization
 
-* [Technical and organizational measures](docs/technical-and-organizational-measures.md)
-* [Meeting rules](docs/meeting-rules.md)
+* [Technical and organizational measures](organization/technical-and-organizational-measures.md)
+* [Meeting rules](organization/meeting-rules.md)
