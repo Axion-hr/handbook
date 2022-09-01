@@ -6,6 +6,7 @@
 
 * [Spring Boot guidelines](coding/spring-boot-coding/README.md)
   * [Project structure](coding/spring-boot-coding/spring-boot-guidelines.md)
+  * [Application properties](coding/spring-boot-coding/application-properties.md)
   * [Observability](coding/spring-boot-coding/observability.md)
   * [Tips and tricks](coding/spring-boot-coding/tips-and-tricks.md)
 * [API standards](coding/api-standard/README.md)
