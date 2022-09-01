@@ -7,6 +7,7 @@
 * [Spring Boot guidelines](coding/spring-boot-coding/README.md)
   * [Project structure](coding/spring-boot-coding/spring-boot-guidelines.md)
   * [Observability](coding/spring-boot-coding/observability.md)
+  * [Tips and tricks](coding/spring-boot-coding/tips-and-tricks.md)
 * [API standards](coding/api-standard/README.md)
   * [Axion API Standard - WIP](coding/api-standard/axion-api-standard-wip.md)
   * [Pagination](coding/api-standard/pagination.md)
