@@ -30,3 +30,38 @@ Reasons:&#x20;
 * e.g. if external system writes in the database, and service doesn't recognises enum type - it fails&#x20;
 
 > Note: db types should be small caps&#x20;
+
+
+
+### Builders for DTO and Model objects
+
+* Use builder patters as much as possible! (via Lombok)
+
+```java
+@Data
+@Builder(toBuilder = true)
+@AllArgsConstructor
+@NoArgsConstructor
+public class CreateTransactionRequestDto {
+    private String cardNumber;
+    private ZonedDateTime transactionStart;
+    private ZonedDateTime transactionEnd;
+    private String locationId;
+    ....
+}
+
+```
+
+* easier creation, immutability pattern, and easier creation of copy objects (!)
+
+```java
+CreateTransactionRequestDto createTransaction = CreateTransactionRequestDto.builder()
+        .locationId("locationId")
+        .cardNumber("cardNumber")
+        .build();
+
+
+CreateTransactionRequestDto modifiedTransaction = createTransaction.toBuilder()
+        .transactionOrigin("modifySomePropery!")
+        .build();
+```
