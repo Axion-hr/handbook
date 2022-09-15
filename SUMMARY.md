@@ -10,6 +10,7 @@
   * [JPA & Hibernate guidelines](coding/spring-boot-coding/jpa-and-hibernate-guidelines.md)
   * [Observability](coding/spring-boot-coding/observability.md)
   * [Tips and tricks](coding/spring-boot-coding/tips-and-tricks.md)
+  * [Snippets](coding/spring-boot-coding/snippets.md)
 * [API standards](coding/api-standard/README.md)
   * [Axion API Standard - WIP](coding/api-standard/axion-api-standard-wip.md)
   * [Pagination](coding/api-standard/pagination.md)
