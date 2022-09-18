@@ -1,6 +1,6 @@
 # Application properties
 
-folder structure
+### Folder structure
 
 ```
 /resources
@@ -20,7 +20,7 @@ application-local.yml
 local.properties
 ```
 
-### Database config&#x20;
+### Database config defaults&#x20;
 
 For local environments you should always define standard data access (database, user, password) properties between other developers
 
@@ -38,8 +38,30 @@ spring:
 * username: postgres
 * password: postgres
 * port: 5432
+* currentSchema - each service has it's own schema, svc\_{name}
 
+### Error handling defaults
 
+```properties
+error:
+  handling:
+    exception-logging: MESSAGE_ONLY
+    full-stacktrace-http-statuses[0]: 5xx
+```
 
+### Logging defaults
 
-
+```properties
+logging:
+  file:
+    name: logs/application.log
+  level.root: INFO
+  level.org.springframework: INFO
+  level.org.hibernate: INFO
+  level.org.springframework.jdbc.core.JdbcTemplate: INFO
+  pattern:
+    file:
+      "%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger{36}.%M - %msg%n"
+    console:
+      "%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger{36}.%M - %msg%n"
+```
