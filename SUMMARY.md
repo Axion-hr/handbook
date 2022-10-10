@@ -5,6 +5,7 @@
 ## Coding
 
 * [Spring Boot guidelines](coding/spring-boot-coding/README.md)
+  * [Framework setup, tools, libraries](coding/spring-boot-coding/framework-setup-tools-libraries.md)
   * [Project structure](coding/spring-boot-coding/spring-boot-guidelines.md)
   * [Application properties](coding/spring-boot-coding/application-properties.md)
   * [JPA & Hibernate guidelines](coding/spring-boot-coding/jpa-and-hibernate-guidelines.md)
