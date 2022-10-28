@@ -14,7 +14,6 @@
   * [Tips and tricks](coding/spring-boot-coding/tips-and-tricks.md)
   * [Snippets](coding/spring-boot-coding/snippets.md)
 * [API standards](coding/api-standard/README.md)
-  * [Axion API Standard - WIP](coding/api-standard/axion-api-standard-wip.md)
   * [Pagination](coding/api-standard/pagination.md)
   * [Resource oriented design](coding/api-standard/resource-oriented-design.md)
   * [Methods](coding/api-standard/methods/README.md)
