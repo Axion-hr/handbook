@@ -30,6 +30,9 @@
 
 ## Organization
 
+* [Secure coding standards](organization/secure-coding-standards/README.md)
+  * [Service communication](organization/secure-coding-standards/service-communication.md)
+  * [Authorization and authentication](organization/secure-coding-standards/authorization-and-authentication.md)
 * [Technical and organizational measures](organization/technical-and-organizational-measures.md)
 * [Meeting rules](organization/meeting-rules.md)
 * [Tools](devops/external-tools.md)
