@@ -10,6 +10,7 @@
   * [Application properties](coding/spring-boot-coding/application-properties.md)
   * [JPA & Hibernate guidelines](coding/spring-boot-coding/jpa-and-hibernate-guidelines.md)
   * [Observability](coding/spring-boot-coding/observability.md)
+  * [Logging guidelines](coding/spring-boot-coding/logging-guidelines.md)
   * [Time](coding/spring-boot-coding/time.md)
   * [Tips and tricks](coding/spring-boot-coding/tips-and-tricks.md)
   * [Snippets](coding/spring-boot-coding/snippets.md)
