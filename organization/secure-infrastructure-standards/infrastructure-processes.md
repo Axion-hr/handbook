@@ -12,6 +12,8 @@ User access need to implement
 * Disable any password hints 
 * Verification of user in the events of password resets, provisioning tokens and such 
 
+All access given to employees must be temporary (where possible).
+
 # Emergency access 
 
 In order to cope and enable restoration regular operations during major incident we must ensure a process and responsible people who can execute emergency access. The incident can vary from technical degradation of service to operational personnel incident.  
