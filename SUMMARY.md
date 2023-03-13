@@ -36,7 +36,7 @@
   * [Authorization and authentication](organization/secure-coding-standards/authorization-and-authentication.md)
   * [Additional standards](organization/secure-coding-standards/additional-standards.md)
 * [Secure infrastructure standards](organization/secure-infrastructure-standards/README.md)
-  * [Infrastructure technical standards](secure-infrastructure-standards/infrastructure-technical-standards.md)
+  * [Infrastructure technical standards](organization/secure-infrastructure-standards/infrastructure-technical-standards.md)
 * [Technical and organizational measures](organization/technical-and-organizational-measures.md)
 * [Meeting rules](organization/meeting-rules.md)
 * [Tools](devops/external-tools.md)
