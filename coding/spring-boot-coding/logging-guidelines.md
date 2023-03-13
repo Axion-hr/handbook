@@ -4,9 +4,7 @@
 
 ### Lines dependency&#x20;
 
-{% hint style="info" %}
-Always try to have log lines independed from each other (!)
-{% endhint %}
+> Always try to have log lines independed from each other (!)
 
 Avoid creating this kind of log outputs:&#x20;
 
