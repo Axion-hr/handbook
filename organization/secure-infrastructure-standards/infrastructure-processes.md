@@ -12,7 +12,7 @@ User access need to implement
 * Disable any password hints 
 * Verification of user in the events of password resets, provisioning tokens and such 
 
-All access given to employees must be temporary (where possible).
+All access given to employees must be temporary with set expiration date (where possible).
 
 # Emergency access 
 
