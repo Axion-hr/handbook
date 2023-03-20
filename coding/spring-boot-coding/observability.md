@@ -134,7 +134,7 @@ To correlate logs we will use OpenTelemetry, for now with auto-instrumentation o
 
 **This step is not necessary for development, it will be enabled on the server!** if you still want to try it out it is rather simple to setup (but you should have a grafana agent pre-installed otherwise you won't see the results).
 
-1. download the latest jar for Java OpenTelemetry [OpenTelemetry Git](https://github.com/open-telemetry/opentelemetry-java)
+1. download the latest jar for Java OpenTelemetry [OpenTelemetry Git](https://github.com/open-telemetry/opentelemetry-java) (or use [direct link](https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/latest/download/opentelemetry-javaagent.jar) to latest jar file)
 2. add the following VM options (either when running via console or in IntellJ)
 
 ```
