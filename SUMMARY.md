@@ -14,6 +14,7 @@
   * [Time](coding/spring-boot-coding/time.md)
   * [Tips and tricks](coding/spring-boot-coding/tips-and-tricks.md)
   * [Snippets](coding/spring-boot-coding/snippets.md)
+  * [Liquibase](coding/spring-boot-coding/liquibase.md)
 * [API standards](coding/api-standard/README.md)
   * [Pagination](coding/api-standard/pagination.md)
   * [Resource oriented design](coding/api-standard/resource-oriented-design.md)
