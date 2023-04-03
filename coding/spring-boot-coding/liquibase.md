@@ -46,13 +46,19 @@ It can include all change-logs files by referencing path
       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd
       http://www.liquibase.org/xml/ns/pro 
       http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd">
-   <changeSet  author="nvoxland"  id="1">
+   <changeSet  author="nvoxland"  id="v1_1">
       <createTable tableName="person">
          <column  name="id"  type="INTEGER">
             <constraints  nullable="false"  primaryKey="true"  unique="true"/>
          </column>
          <column  name="name"  type="VARCHAR(255)" />
       </createTable>
+   </changeSet>
+   <changeSet  author="nvoxland"  id="v1_2">
+      ..
+   </changeSet>
+   <changeSet  author="nvoxland"  id="v1_3">
+      ..
    </changeSet>
 </databaseChangeLog>
 ```
