@@ -135,17 +135,13 @@ To correlate logs we will use OpenTelemetry, for now with auto-instrumentation o
 **This step is not necessary for development, it will be enabled on the server!** if you still want to try it out it is rather simple to setup (but you should have a grafana agent pre-installed otherwise you won't see the results).
 
 1. download the latest jar for Java OpenTelemetry [OpenTelemetry Git](https://github.com/open-telemetry/opentelemetry-java) (or use [direct link](https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/latest/download/opentelemetry-javaagent.jar) to latest jar file)
-2. add the following VM options (either when running via console or in IntellJ)
+2. make sure you are using Java 17. Installing java 17 on mac is as simple as: `brew install openjdk@17`. If brew suggests java needs to be put in front of the path variable, make sure to paste provided line in the console. To verify that java 17 is really being used, shut down console window, repen it, and type `java -version` in the console.&#x20;
+3. Below is an example of running a service: \
+   `java -javaagent:../opentelemetry-javaagent.jar -Dotel.traces.exporter=otlp -Dotel.exporter.otlp.endpoint=http://<otel_sink>>:<<some_port>> -Dotel.resource.attributes=service.name=lp-be-cupo-service -jar target/lp-be-cupo-service-0.16.0.jar`&#x20;
+4. change the service.name to reflect the service you are building
+5. see if you can reach otlp.endpoint is accessible from your computer
 
-```
--javaagent:/Users/gzuri/git/opentelemetry-javaagent.jar
--Dotel.resource.attributes=service.name=demo-observability
--Dotel.traces.exporter=otlp
--Dotel.exporter.otlp.endpoint=http://127.0.0.1:4317
-```
 
-1. change the service.name to reflect the service you are building
-2. that's it
 
 sources:
 
