@@ -42,5 +42,9 @@ To start JMeter with GUI, just type `jmeter` in console. Please open stress test
  * host 
  * optional query parameters / request body
 
+Headers can be defined by right clicking on the Test plan -> Add -> Config element ->  HTTP Header Manager. New node on the tree will show up, and clicking on it open configuration panel on the right.
 
-TBD
+All requests are defined within Thread group (under Threads) that is added in the similar way as HTTP Header Manager. Thread group that was used in CuPo testing pulled thread count, ramp up time and loop count from User Defined Variables object (under Config element), that is constru
+
+
+
